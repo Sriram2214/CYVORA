@@ -60,3 +60,4 @@ cyvora/
 
 2. Configuration:
    Adjust settings in `config.yaml`.
+   

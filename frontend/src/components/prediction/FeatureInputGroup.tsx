@@ -25,19 +25,19 @@ export const FeatureInputGroup: React.FC<Props> = ({
     return (
       <div key={f.key} className="space-y-1">
         <div className="flex items-center justify-between text-xs">
-          <label className="text-slate-800 font-semibold truncate max-w-[190px]" title={f.label}>
+          <label className="text-slate-900 font-extrabold truncate max-w-[190px]" title={f.label}>
             {f.label}
           </label>
-          {f.unit && <span className="text-[10px] font-mono-code text-slate-500 font-medium">{f.unit}</span>}
+          {f.unit && <span className="text-[10px] font-mono-code text-slate-700 font-bold">{f.unit}</span>}
         </div>
         <input
           type="number"
           step={f.step || 'any'}
           value={val}
           onChange={(e) => onChange(f.key, parseFloat(e.target.value) || 0)}
-          className="w-full bg-white border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-900 font-mono-code focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors shadow-sm"
+          className="w-full bg-white border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-900 font-black font-mono-code focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors shadow-sm"
         />
-        <p className="text-[10px] text-slate-500 truncate" title={f.description}>
+        <p className="text-[11px] text-slate-700 font-semibold truncate" title={f.description}>
           {f.description}
         </p>
       </div>
@@ -49,13 +49,13 @@ export const FeatureInputGroup: React.FC<Props> = ({
       {/* 14 Core Network Flow Features */}
       <div>
         <div className="flex items-center justify-between mb-3">
-          <h4 className="text-xs font-bold uppercase tracking-wider text-sky-700 font-mono-code flex items-center gap-2">
-            <Sliders className="w-3.5 h-3.5" />
+          <h4 className="text-xs font-black uppercase tracking-wider text-sky-900 font-mono-code flex items-center gap-2">
+            <Sliders className="w-3.5 h-3.5 text-sky-700" />
             CORE NETWORK FLOW FEATURES (14 PRIMARY ATTRIBUTES)
           </h4>
-          <span className="text-[11px] text-slate-500 font-mono-code font-medium">RFC Flow Telemetry Standard</span>
+          <span className="text-[11px] text-slate-700 font-mono-code font-bold">RFC Flow Telemetry Standard</span>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 rounded-xl bg-slate-50 border border-slate-300 shadow-sm">
           {CORE_FEATURES.map((f) => renderField(f))}
         </div>
       </div>

@@ -54,10 +54,10 @@ export const Settings: React.FC = () => {
                 value={apiUrl}
                 onChange={(e) => setApiUrl(e.target.value)}
                 className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-slate-900 font-medium focus:outline-none focus:border-sky-500 shadow-sm"
-                placeholder="http://127.0.0.1:8001"
+                placeholder="http://127.0.0.1:8000"
               />
               <p className="text-[11px] text-slate-500 mt-1.5 font-medium">
-                Default: <span className="text-sky-700 font-bold">http://127.0.0.1:8001</span>
+                Default: <span className="text-sky-700 font-bold">http://127.0.0.1:8000</span>
               </p>
             </div>
 

@@ -15,11 +15,11 @@ export const MetricCardGrid: React.FC<Props> = ({
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <div>
-          <h3 className="text-sm font-bold text-slate-800 uppercase tracking-wider font-mono-code flex items-center gap-2">
+          <h3 className="text-sm font-semibold text-slate-900 flex items-center gap-2">
             <Award className="w-4 h-4 text-sky-600" />
-            V4 EVALUATION PERFORMANCE BENCHMARKS
+            V4 Evaluation Performance Benchmarks
           </h3>
-          <p className="text-xs text-slate-500">
+          <p className="text-xs text-slate-500 mt-0.5">
             Rigorous evaluation metrics verified on 378,355 holdout test flows (CICIDS benchmark).
           </p>
         </div>
@@ -32,18 +32,18 @@ export const MetricCardGrid: React.FC<Props> = ({
               key={m.name}
               className="bg-white rounded-xl p-4 border border-slate-200 shadow-sm hover:border-sky-300 transition-all hover:shadow"
             >
-              <div className="flex items-center justify-between text-xs font-mono-code text-slate-500 mb-1">
-                <span className="uppercase font-bold tracking-wider truncate" title={m.name}>
+              <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
+                <span className="font-semibold text-slate-700 truncate" title={m.name}>
                   {m.name}
                 </span>
                 {m.isReal && (
-                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200 font-semibold">
-                    VERIFIED
+                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200 font-medium">
+                    Verified
                   </span>
                 )}
               </div>
 
-              <div className="text-2xl font-black font-mono-code text-sky-700 my-1.5">
+              <div className="text-2xl font-bold text-sky-700 my-1.5 tracking-tight">
                 {m.value !== null ? m.percentage : 'N/A'}
               </div>
 

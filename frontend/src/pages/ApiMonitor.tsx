@@ -141,14 +141,14 @@ export const ApiMonitor: React.FC = () => {
                   value={baseUrlInput}
                   onChange={(e) => setBaseUrlInput(e.target.value)}
                   className="flex-1 bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-slate-900 font-medium focus:outline-none focus:border-sky-500 shadow-sm"
-                  placeholder="http://127.0.0.1:8001"
+                  placeholder="http://127.0.0.1:8000"
                 />
                 <Button variant="primary" size="sm" onClick={handleSaveUrl}>
                   Update
                 </Button>
               </div>
               <p className="text-[11px] text-slate-500 mt-1 font-medium">
-                Default: <span className="text-sky-700 font-bold">http://127.0.0.1:8001</span>
+                Default: <span className="text-sky-700 font-bold">http://127.0.0.1:8000</span>
               </p>
             </div>
 
@@ -204,13 +204,13 @@ export const ApiMonitor: React.FC = () => {
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
             <thead>
-              <tr className="border-b border-slate-200 text-slate-600 uppercase text-[11px] font-bold bg-slate-50">
-                <th className="py-3 px-4">Time</th>
-                <th className="py-3 px-4">Method</th>
-                <th className="py-3 px-4">Endpoint</th>
-                <th className="py-3 px-4">Status Code</th>
-                <th className="py-3 px-4">Latency</th>
-                <th className="py-3 px-4">Result</th>
+              <tr className="border-b-2 border-slate-700 text-cyan-300 uppercase text-xs font-black bg-slate-900">
+                <th className="py-3 px-4 text-cyan-300">Time</th>
+                <th className="py-3 px-4 text-cyan-300">Method</th>
+                <th className="py-3 px-4 text-cyan-300">Endpoint</th>
+                <th className="py-3 px-4 text-cyan-300">Status Code</th>
+                <th className="py-3 px-4 text-cyan-300">Latency</th>
+                <th className="py-3 px-4 text-cyan-300">Result</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100 text-slate-800 font-medium">

@@ -25,8 +25,8 @@ export const Badge: React.FC<BadgeProps> = ({
     }
     case 'rare':
       return (
-        <span className={`${baseClass} bg-purple-50 text-purple-700 border border-purple-200 shadow-sm ${className}`}>
-          <span className="w-1.5 h-1.5 rounded-full bg-purple-600 animate-pulse"></span>
+        <span className={`${baseClass} bg-purple-200 text-black font-black border border-purple-500 shadow-sm ${className}`}>
+          <span className="w-1.5 h-1.5 rounded-full bg-purple-900 animate-pulse"></span>
           {children}
         </span>
       );

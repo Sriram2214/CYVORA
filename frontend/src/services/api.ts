@@ -24,7 +24,7 @@ export const formatApiError = (error: unknown): string => {
       return 'Request Timeout: CYVORA backend did not respond within timeout limits.';
     }
     if (axiosError.code === 'ERR_NETWORK') {
-      return 'CYVORA Backend Unavailable (Cannot connect to http://127.0.0.1:8001). Running in DEMO MODE.';
+      return `CYVORA Backend Unavailable (Cannot connect to ${getApiBaseUrl()}). Running in DEMO MODE.`;
     }
     return axiosError.message || 'API request failed';
   }

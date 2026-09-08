@@ -2,7 +2,7 @@
 
 export const API_CONFIG = {
   // Default development backend URL
-  BASE_URL: import.meta.env.VITE_API_URL || 'http://127.0.0.1:8001',
+  BASE_URL: import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000',
   TIMEOUT_MS: 8000,
   POLL_INTERVAL_MS: 5000,
   ENDPOINTS: {
@@ -11,11 +11,17 @@ export const API_CONFIG = {
     MODEL_INFO: '/model-info',
     API_STATUS: '/api/status',
     PREDICT: '/predict',
+    PREVENTION_STATUS: '/prevention/status',
   },
 } as const;
 
 export const getApiBaseUrl = (): string => {
   const customUrl = localStorage.getItem('cyvora_api_base_url');
+  if (customUrl && customUrl.includes(':8001')) {
+    const fixedUrl = customUrl.replace(':8001', ':8000');
+    localStorage.setItem('cyvora_api_base_url', fixedUrl);
+    return fixedUrl;
+  }
   return customUrl || API_CONFIG.BASE_URL;
 };
 

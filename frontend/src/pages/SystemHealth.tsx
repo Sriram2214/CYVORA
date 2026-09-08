@@ -35,7 +35,7 @@ export const SystemHealth: React.FC = () => {
       latency: isBackendConnected ? `${responseTimeMs} ms` : 'N/A',
       version: 'FastAPI 1.0.0',
       details: isBackendConnected
-        ? 'Active connection on http://127.0.0.1:8001.'
+        ? 'Active connection on http://127.0.0.1:8000.'
         : 'Backend server offline. Operating in simulated demo mode.',
     },
     {

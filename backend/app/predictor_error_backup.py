@@ -1,4 +1,4 @@
-
+@'
 import os
 import joblib
 import pandas as pd
@@ -698,3 +698,4 @@ def predict_attack(features: dict):
         "global_confidence_threshold":
             BEST_GLOBAL_CONFIDENCE
     }
+'@ | Set-Content C:\CYVORA\backend\app\predictor.py -Encoding UTF8
